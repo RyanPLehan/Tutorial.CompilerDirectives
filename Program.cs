@@ -50,6 +50,7 @@ namespace Tutorial.CompilerDirectives
 
 #if NETCOREAPP
             Console.WriteLine("Running a .Net Core application");
+#endif
 
 #if NET5_0
             Console.WriteLine("Running a .Net Core 5 application");
