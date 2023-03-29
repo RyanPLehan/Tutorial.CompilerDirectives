@@ -1,0 +1,19 @@
+﻿Compiler Directives aka Preprocessor Directives
+1.  Directives are used by Visual Studio and its compiler to assist the developer with the following
+	a.	Warnings while compiling the code
+	b.	Conditional compiling - compiling specific sections of code
+	c.	Defining/Undefining symbols
+		1.	If manually defining a symbol in a file, definition must be at the top of the file and every file where the symbol is to be used
+	d.	Defining constant values
+		Note: This is applicable to C and C++, not C# and VB.net
+	e.	Defining regions - Allows code to be collapsed/expanded
+		Note: This is applicable to C and C++, not C# and VB.net
+	e.	Creating macros
+		Note: This is applicable to C and C++, not C# and VB.net
+	f.	Generate user defined compiler errors and warnings
+	g.	Pragmas - gives the compiler special instructions for compilation of the current file of which the Pragma appears
+
+2.	Visual Studio compiler does not have a pre-processor.  However, the directives act as if it has a pre-processor
+
+3.	Depending upon the compiler, directive keywords can be case sensitive
+
