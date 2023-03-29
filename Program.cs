@@ -11,11 +11,18 @@ namespace Tutorial.CompilerDirectives
         {
             // Examples of using Compiler Directives
             ConditionalDirective_DebugVsRelease();
+
+            ConditionalDirective_SpecificDotNet();
+
             ConditionalDirective_CustomDefinition();
             StaticRoutines.ConditionalDirective_CustomDefinition();
 
+
+            // No conditional compiler directive, therefore gets executed all the time
             ContinueAfterKeyPress();
         }
+
+        #region Private Static Methods
 
         private static void ContinueAfterKeyPress()
         {
@@ -28,6 +35,8 @@ namespace Tutorial.CompilerDirectives
 
         private static void ConditionalDirective_DebugVsRelease()
         {
+            Console.WriteLine();
+
 #if DEBUG
             Console.WriteLine("Debug Mode");
 #else
@@ -35,19 +44,44 @@ namespace Tutorial.CompilerDirectives
 #endif
         }
 
+        private static void ConditionalDirective_SpecificDotNet()
+        {
+            Console.WriteLine();
+
+#if NETCOREAPP
+            Console.WriteLine("Running a .Net Core application");
+
+#if NET5_0
+            Console.WriteLine("Running a .Net Core 5 application");
+#endif
+
+#if NET6_0_OR_GREATER
+            Console.WriteLine("Running a .Net Core 6 or higher application");
+#endif
+ 
+#else
+            Console.WriteLine("Running a .Net Full Framework application");
+#endif
+        }
+
 
         private static void ConditionalDirective_CustomDefinition()
         {
+            Console.WriteLine();
+
+// Manually added via VS
 #if MYCUSTOM_1
             Console.WriteLine("Using MYCUSTOM_1 definition from Program");
 #endif
 
-#if MYCUSTOM_2
+// Manually added at top of file
+#if (MYCUSTOM_2) || (MYCUSTOM_2 == true)
             Console.WriteLine("Using MYCUSTOM_2 definition from Program");
 #endif
 
         }
 
 
+        #endregion
     }
 }

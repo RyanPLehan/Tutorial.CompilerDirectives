@@ -7,11 +7,15 @@ namespace Tutorial.CompilerDirectives
     {
         public static void ConditionalDirective_CustomDefinition()
         {
+            Console.WriteLine();
+
+// Manually added via VS
 #if MYCUSTOM_1
             Console.WriteLine("Using MYCUSTOM_1 definition from StaticRoutines");
 #endif
 
-#if MYCUSTOM_2
+ // Manually added at top of file
+#if (MYCUSTOM_2) || (MYCUSTOM_2 == true)
             Console.WriteLine("Using MYCUSTOM_2 definition from StaticRoutines");
 #endif
         }

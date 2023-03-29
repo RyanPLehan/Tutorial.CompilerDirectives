@@ -1,4 +1,9 @@
 ﻿Compiler Directives aka Preprocessor Directives
+
+References
+1.	https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives
+
+
 1.  Directives are used by Visual Studio and its compiler to assist the developer with the following
 	a.	Warnings while compiling the code
 	b.	Conditional compiling - compiling specific sections of code
