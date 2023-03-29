@@ -1,4 +1,5 @@
 ﻿//#define MYCUSTOM_2
+//#undef MYCUSTOM_1
 using System;
 
 namespace Tutorial.CompilerDirectives
