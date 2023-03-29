@@ -58,8 +58,8 @@ namespace Tutorial.CompilerDirectives
 #if NET6_0_OR_GREATER
             Console.WriteLine("Running a .Net Core 6 or higher application");
 #endif
- 
-#else
+
+#if NETFRAMEWORK
             Console.WriteLine("Running a .Net Full Framework application");
 #endif
         }
