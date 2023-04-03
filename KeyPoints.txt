@@ -20,5 +20,7 @@ References
 
 2.	Visual Studio compiler does not have a pre-processor.  However, the directives act as if it has a pre-processor
 
-3.	Depending upon the compiler, directive keywords can be case sensitive
-
+3.	Depending upon the compiler (VB.net, C#, F#, etc)
+	a.	May or may not have directives
+	b.	Directive keywords can be case sensitive
+	c.	Directive symbol is 

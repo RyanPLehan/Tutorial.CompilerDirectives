@@ -9,6 +9,11 @@ namespace Tutorial.CompilerDirectives
     {
         public static void Main(string[] args)
         {
+            // Examples of what NOT to do
+            WhatNotToDo();
+            WhatNotToDo_EvenWorse();
+
+
             // Examples of using Compiler Directives
             ConditionalDirective_DebugVsRelease();
 
@@ -31,7 +36,25 @@ namespace Tutorial.CompilerDirectives
             Console.ReadKey();
         }
 
+        private static void WhatNotToDo()
+        {
+            const bool DEBUG = true;
 
+            if (DEBUG)
+                Console.WriteLine("Debug Mode");
+            else
+                Console.WriteLine("Release Mode");
+        }
+
+        private static void WhatNotToDo_EvenWorse()
+        {
+            string environment = "Prod";        // Dev
+
+            if (environment.Equals("dev", StringComparison.OrdinalIgnoreCase))
+                Console.WriteLine("Running in Development Environment");
+            else
+                Console.WriteLine("Running in Production Environment");
+        }
 
         private static void ConditionalDirective_DebugVsRelease()
         {
